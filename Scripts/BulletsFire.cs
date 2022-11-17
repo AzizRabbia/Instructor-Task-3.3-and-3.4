@@ -17,8 +17,14 @@ public class BulletsFire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+    }
+
+    private void FixedUpdate()
+    {
         //bullet fire functionality
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             var a = Instantiate(bullet, bulletSpawnPoint.transform.position, bullet.transform.rotation);
             a.AddForce(new Vector3(0f, 2000f, 0f));
         }
